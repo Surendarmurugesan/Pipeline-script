@@ -1,9 +1,9 @@
 node {
-stage("Create a build input)
+stage("Create a build input")
 {
-sh "mkdir input"
-writeFile file: /input/useforbuild.txt, text: "We gonna a build to this file"
-writeFile file: /input/usefortest.md, text: "We gonna a test to this file"
+sh "mkdir -p input"
+writeFile file: "input/useforbuild.txt", text: "We gonna a build to this file."
+writeFile file: "input/usefortest.md", text: "We gonna a test to this file."
 }
 stage("Archive_Artifacts")
 {
@@ -21,7 +21,7 @@ archieveArtifacts artifacts: 'input/*.txt', excludes: 'input/*.md'
 node {
     stage ("Create build output")
     
-    // Make the output directory.
+    // Make the output directory. and 
     sh "mkdir -p output"
 
     // Write an useful file, which is needed to be archived.
