@@ -1,0 +1,12 @@
+node {
+stage("Create a build input)
+{
+sh "mkdir input"
+writeFile file: /input/useforbuild.txt, text: "We gonna a build to this file"
+writeFile file: /input/usefortest.md, text: "We gonna a test to this file"
+}
+stage("Archive_Artifacts")
+{
+archieveArtifacts artifacts: 'input/*.txt', excludes: 'input/*.md'
+}
+}
