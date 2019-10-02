@@ -3,7 +3,7 @@ node("master") {
     stage("Prepare"){
         println("Preparing...")
         git(
-                url: "git@github.com:srikrishnaprakash/pls.git",
+                url: "https://github.com/Surendarmurugesan/Pipeline-script.git",
                 branch: "master"
 	    )
         dir('config') {
