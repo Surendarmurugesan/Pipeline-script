@@ -26,7 +26,6 @@ node("master") {
     }
     stage("Deploy"){
         println("Deploying...")
-	   sh "ls" 
-	   sh "pwd"
+	   sh "script.sh"
     }
 }
