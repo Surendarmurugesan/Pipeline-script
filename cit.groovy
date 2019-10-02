@@ -26,7 +26,7 @@ node("master") {
     }
     stage("Deploy"){
         println("Deploying...")
-	    ls 
-	    pwd
+	   sh "ls" 
+	   sh "pwd"
     }
 }
