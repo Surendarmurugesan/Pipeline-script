@@ -16,7 +16,7 @@ node("master") {
         
     }
     stage("Clone Application"){
-        load 'app/clne.groovy'
+       
     }
     stage("Build"){
         load 'app/bld.groovy'
